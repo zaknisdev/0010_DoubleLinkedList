@@ -53,5 +53,9 @@ class DoubleLinkedList
     }
 
     node *current = START;
-
+    
+    while (Current->next != NULL && current->next->noMhs < nim)
+    {
+        current = current->next;
+    }
 };
