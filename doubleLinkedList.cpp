@@ -13,12 +13,12 @@ class node
 class DoubleLinkedList
 {
     private:
-    node *Start;
+    node *START;
 
     public:
     DoubleLinkedList()
     {
-        Start = NULL;
+        START = NULL;
     }
 
     void addNode()
@@ -31,5 +31,13 @@ class DoubleLinkedList
         node *newNode = new node();
 
         newNode->noMhs = nim;
+
+        if (START == NULL || nim <= START->noMhs)
+        {
+            if (START != NULL && nim == START->noMhs)
+            cout << "\nDuplicate number not allowed" << endl;
+            return;
+        }
+        
     }
 };
