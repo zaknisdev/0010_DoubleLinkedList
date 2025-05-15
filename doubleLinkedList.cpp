@@ -113,5 +113,22 @@ class DoubleLinkedList
         delete current;
         cout << "Record with roll number " << rollNo << " deleted " << endl;
     }
-    
+
+    void traverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        node *currentNode = START;
+
+        cout << "\nReccord in ascending order of roll number are:\n";
+        int i = 0
+        while (currentNode != NULL)
+        {
+            
+        }
+    }
 };
