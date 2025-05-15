@@ -28,10 +28,13 @@ class DoubleLinkedList
         cout << "\nEnter the roll number of the student";
         cin >> nim;
 
+        //step 1 :allocate memory for new node
         node *newNode = new node();
 
+        //step 2: assign value to the data fields
         newNode->noMhs = nim;
 
+        //step 3: insert at beginning if list is empty or nim is smallest
         if (START == NULL || nim <= START->noMhs)
         {
             if (START != NULL && nim == START->noMhs)
@@ -48,4 +51,7 @@ class DoubleLinkedList
         START = newNode;
         return;
     }
+
+    node *current = START;
+
 };
